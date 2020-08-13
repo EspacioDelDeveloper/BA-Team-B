@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/EspacioDelDeveloper/BA-Team-B/issues"
   },
-  "homepage": "https://github.com/EspacioDelDeveloper/BA-Team-B#readme"
+  "homepage": "https://github.com/EspacioDelDeveloper/BA-Team-B#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.29"
+  }
 }
