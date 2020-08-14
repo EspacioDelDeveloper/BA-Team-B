@@ -1,25 +1,29 @@
 const express = require('express');
 const router = express.Router();
 
-module.exports = () => {
+module.exports = (navlinks) => {
   router.get('/', (req, res) => {
-    res.send('Hello from Express!');
+    res.render('index', { title: 'Home', navlinks });
+  });
+
+  router.get('/home', (req, res) => {
+    res.render('index', { title: 'Home', navlinks });
   });
 
   router.get('/about', (req, res) => {
-    res.send('This is about');
+    res.render('about', { title: 'About', navlinks });
   });
 
   router.get('/projects', (req, res) => {
-    res.send('This is projects');
+    res.render('projects', { title: 'Projects', navlinks });
   });
 
   router.get('/blog', (req, res) => {
-    res.send('This is blog');
+    res.render('blog', { title: 'Blog', navlinks });
   });
 
   router.get('/contact', (req, res) => {
-    res.send('This is contact');
+    res.render('contact', { title: 'Contact', navlinks });
   });
 
   return router;
