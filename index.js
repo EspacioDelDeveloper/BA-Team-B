@@ -1,15 +1,25 @@
-const server = require('express')();
+const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors')
-const router = require('./app/routes/routes');
 const displayRoutes = require('express-routemap');
+const router = require('./router/route');
+const path = require('path');
 
+const server = express();
+
+// pug config
+server.set('view engine', 'pug');
+
+server.set('views', path.join(__dirname, './views'));
+
+// css config
+server.use(express.static('public'));
 
 server.use(cors())
 server.use(bodyParser.json())
-server.use(router);
+server.use('/',router());
 
-const port = 3000;
+const port = 4000;
 server.listen(port, () => {
     console.log(`API running -> Port ${port}`);
     displayRoutes(server);

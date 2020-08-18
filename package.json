@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js",
+    "killport": "killall -9 node"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,9 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-routemap": "^1.6.0",
+    "nodemon": "^2.0.4",
+    "path": "^0.12.7",
+    "pug": "^3.0.0",
     "sequelize": "^6.3.4"
   }
 }
