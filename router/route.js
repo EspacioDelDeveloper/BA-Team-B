@@ -10,22 +10,22 @@ module.exports = function () {
     });
     
     router.get('/about', (req,res) => {
-        res.send('About');
+        res.render('about');
 
     });
 
     router.get('/projects', (req,res) => {
-        res.send('Projects');
+        res.render('projects');
 
     });
 
     router.get('/blog', (req,res) => {
-        res.send('Blog');
+        res.render('blog');
 
     });
 
     router.get('/contactus', (req,res) => {
-        res.send('Contact us');
+        res.render('contactus');
 
     });
     
