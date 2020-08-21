@@ -13,7 +13,7 @@ server.set('view engine', 'pug');
 server.set('views', path.join(__dirname, './views'));
 
 // css config
-server.use(express.static('public'));
+server.use(express.static('./views/public'));
 
 server.use(cors())
 server.use(bodyParser.json())
